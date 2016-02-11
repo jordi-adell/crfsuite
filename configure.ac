@@ -131,7 +131,7 @@ AC_ARG_WITH(
 	[AS_HELP_STRING([--with-liblbfgs=DIR],[liblbfgs directory])],
 	[INCLUDES="${INCLUDES} -I${withval}/include"; LDFLAGS="${LDFLAGS} -L${withval}/lib"]
 )
-AC_CHECK_LIB(lbfgs, lbfgs)
+AC_CHECK_LIB(lbfgs, lbfgs, [], [exit -1])
 
 dnl ------------------------------------------------------------------
 dnl Export variables
